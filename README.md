@@ -34,9 +34,12 @@ Il sistema comunica al management:
 Il progetto è stato scritto utilizzando esclusivamente le librerie standard di Python (math, random), pertanto non richiede l'installazione di librerie esterne (nessun file requirements.txt necessario).
 Per eseguire la simulazione in locale:
 Assicurati di avere Python 3 installato sul tuo computer.
-Clona questa repository o scarica il file .py.
+
+Clona questa repository o scarica il file .py
+
 Apri il terminale o il prompt dei comandi nella cartella del progetto.
 Esegui il comando:
+
 python simulatore_agricolo.py
 
 Osserva i risultati generati casualmente per la stagione in corso direttamente a schermo. Ripetendo il comando, il motore stocastico genererà scenari operativi e climatici sempre diversi!
