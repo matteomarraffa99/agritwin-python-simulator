@@ -8,11 +8,11 @@ class DigitalTwinAgricolo:
     """
     
     def __init__(self):
-        # Parametri operativi di base dell'organizzazione
+        # parametri operativi di base dell'organizzazione
         self.ore_lavoro_giornaliere = 8
         self.risultati_simulazione = dict()
         
-        # Configurazione olistica dei processi: Tempi, Capacità, Costi ed Emissioni
+        # configurazione olistica dei processi: Tempi, Capacità, Costi ed Emissioni
         self.modello_produttivo = dict({
             "Grano_Duro_IoT": dict({
                 "sequenza": "Mietitrebbiatura Automatica (1 Fase)",
@@ -54,41 +54,41 @@ class DigitalTwinAgricolo:
         Metodo principale che esegue il calcolo algoritmico del processo,
         intersecando quantità base, impatto climatico e metriche strategiche.
         """
-        # Generazione quantità nominali teoriche
+        # generazione quantità nominali teoriche
         quantita_teoriche = dict({
             "Grano_Duro_IoT": random.randint(200, 500),
             "Olive_EVO": random.randint(20, 70),
             "Uva_Riserva": random.randint(30, 90)
         })
         
-        # Estrazione scenario climatico per la stagione corrente
+        # estrazione scenario climatico per la stagione corrente
         clima_nome, molt_resa, molt_tempo = self.genera_scenario_climatico()
         
-        # Registrazione globale dello scenario
+        # registrazione globale dello scenario
         self.risultati_simulazione.update({"SCENARIO_CLIMATICO": clima_nome})
         
-        # Analisi iterativa per ogni lotto di produzione
+        # analisi iterativa per ogni lotto di produzione
         for prodotto, qta_nominale in quantita_teoriche.items():
             parametri = self.modello_produttivo.get(prodotto)
             
-            # Applicazione impatto climatico
+            # applicazione impatto climatico
             qta_effettiva = qta_nominale * molt_resa
             
-            # Calcolo dei tempi con penalità meteorologica
+            # calcolo dei tempi con penalità meteorologica
             tempi = parametri.get("tempi_fasi_ore")
             tempo_base_per_tonnellata = sum(tempi)
             tempo_effettivo_per_ton = tempo_base_per_tonnellata * molt_tempo
             
-            # Operazioni matematiche fondamentali
+            # operazioni matematiche fondamentali
             ore_totali = qta_effettiva * tempo_effettivo_per_ton
             cap_max = parametri.get("cap_max_giornaliera_ton")
             giorni_necessari = math.ceil(qta_effettiva / cap_max)
             
-            # Calcolo indicatori strategici (Economia ed Ecologia)
+            # calcolo indicatori strategici 
             costo_totale = ore_totali * parametri.get("costo_orario_euro")
             co2_totale = ore_totali * parametri.get("emissioni_co2_kg_ora")
             
-            # Compilazione del report per il prodotto
+            # compilazione del report per il prodotto
             dati_output = dict({
                 "Tonnellate_Raccolte": round(qta_effettiva, 2),
                 "Ore_Lavoro": round(ore_totali, 1),
@@ -111,7 +111,7 @@ class DigitalTwinAgricolo:
         scenario = self.risultati_simulazione.get("SCENARIO_CLIMATICO")
         print(f"> VARIABILE STOCASTICA RILEVATA: Condizione di '{scenario}'\n")
         
-        # Iterazione per stampare solo i dati dei prodotti (escludendo lo scenario)
+        # iterazione per stampare solo i dati dei prodotti (escludendo lo scenario)
         for chiave, dati in self.risultati_simulazione.items():
             if chiave == "SCENARIO_CLIMATICO":
                 continue
@@ -128,11 +128,12 @@ class DigitalTwinAgricolo:
 # ESECUZIONE PRINCIPALE
 # ==========================================
 if __name__ == "__main__":
-    # Istanziazione dell'oggetto (Gemello Digitale)
+    # istanziazione dell'oggetto (gemello digitale)
     simulatore = DigitalTwinAgricolo()
     
-    # Esecuzione dei processi
+    # esecuzione dei processi
     simulatore.simula_raccolto()
     
-    # Output dei risultati
+    # output dei risultati
     simulatore.stampa_report_direzionale()
+
