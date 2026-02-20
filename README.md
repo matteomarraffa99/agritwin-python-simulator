@@ -1,3 +1,8 @@
+# PW 15. Sviluppo di un codice python per simulare un processo produttivo nel settore primario. Tesi di Laurea Informatica per le aziende digitali L31 per Università Pegaso, Autore: Matteo Marraffa  Mat. 0312400879
+
+
+
+
 # 🌾 AgriTwin - Digital Twin Stocastico per l'Agricoltura 4.0
 **Python
 
