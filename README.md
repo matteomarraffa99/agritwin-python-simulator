@@ -8,7 +8,7 @@
 
 **Project Work:** Sviluppo di un codice Python per simulare un processo produttivo nel settore primario.
 
-##  Obiettivo del Progetto
+##  Obiettivi
 In questo progetto ho voluto realizzare una modellazione software di un'azienda agricola in ottica di **Agricoltura 4.0**. Invece di limitarmi a un semplice calcolatore di tempi, ho progettato un Simulatore Stocastico (Digital Twin) con lo scopo di:
 
 * **Gestire 3 output produttivi differenziati:** Grano Duro (coltura estensiva meccanizzata), Olive EVO e Uva Riserva (colture con raccolta agevolata/manuale).
@@ -17,16 +17,15 @@ In questo progetto ho voluto realizzare una modellazione software di un'azienda 
 
 Questo Project Work rappresenta il punto di incontro tra le mie competenze informatiche e le logiche manageriali affrontate durante il mio percorso di studi. Ho cercato di applicare i principi di "Operations Management" unendoli a un'architettura software robusta, dimostrando che l'efficienza aziendale oggi non può essere slegata dalla sostenibilità ambientale.
 
-##  Il Cuore del sistema: `simulatore_agricolo.py`
+##  Il sistema centrale : `simulatore_agricolo.py`
 Questo modulo è il nucleo centrale del progetto. Si tratta di uno script in python che modella la logica decisionale e produttiva dell'azienda agricola.
 
 **Caratteristiche Tecniche:**
-* **Modellazione OOP (Object-Oriented):** Ho utilizzato la classe `DigitalTwinAgricolo` per incapsulare i dati e i metodi, rendendo il codice scalabile. Se in futuro l'azienda volesse aggiungere un nuovo raccolto (es. Mais), basterebbe aggiungere un record al dizionario senza toccare la logica algoritmica.
+* **Ho utilizzato la classe `DigitalTwinAgricolo` per incapsulare i dati e i metodi, rendendo il codice scalabile. Se in futuro l'azienda volesse aggiungere un nuovo raccolto (es. Mais), basterebbe aggiungere un record al dizionario senza toccare la logica algoritmica.
 * **Motore Stocastico:** La funzione `genera_scenario_climatico()` simula l'interferenza dell'ambiente esterno, restituendo moltiplicatori matematici che alterano le variabili di produzione.
 * **Elaborazione sicura dei dati:** Ho evitato l'uso di liste mutabili per i parametri operativi, preferendo le *Tuple* e i metodi `.get()`, per prevenire bug e conflitti durante l'iterazione dei calcoli sui lead-time.
 
-##  CLI Dashboard & Output Direzionale
-Al posto di una tradizionale interfaccia web, ho optato per lo sviluppo di una **Dashboard Direzionale a riga di comando (CLI)**, molto usata in ambito Data Science per la sua velocità di esecuzione.
+
 
 Quando si lancia lo script, l'algoritmo calcola l'intera stagione di raccolta in frazioni di secondo e stampa a video un report formattato e pulito. 
 Il sistema comunica al management:
@@ -49,12 +48,6 @@ python simulatore_agricolo.py
 
 Osserva i risultati generati casualmente per la stagione in corso direttamente a schermo. Ripetendo il comando, il motore stocastico genererà scenari operativi e climatici sempre diversi!
 
-## 📂 Struttura della Repository
-La struttura del progetto è mantenuta volutamente pulita ed essenziale per facilitarne la riproducibilità in qualsiasi ambiente locale:
 
-```text
-/
-├── 📄 simulatore_agricolo.py   # Logica Core del Digital Twin (Il Project Work)
-└── 📄 README.md                # Documentazione del progetto
 
 
