@@ -15,10 +15,7 @@ In questo progetto ho voluto realizzare una modellazione software di un'azienda 
 * **Simulare l'imprevedibilità del clima:** Ho inserito un motore stocastico che genera eventi meteo casuali (es. ondate di calore, piogge intense), i quali impattano dinamicamente sia sulla resa del campo che sulla velocità dei lavoratori.
 * **Integrare metriche ESG (Economia e Sostenibilità):** Il simulatore non calcola solo i giorni di lavoro necessari, ma stima i costi operativi e calcola la *Carbon Footprint* (emissioni di CO2) dei macchinari utilizzati.
 
-Questo Project Work rappresenta il punto di incontro tra le mie competenze informatiche e le logiche manageriali affrontate durante il mio percorso di studi. Ho cercato di applicare i principi di "Operations Management" unendoli a un'architettura software robusta, dimostrando che l'efficienza aziendale oggi non può essere slegata dalla sostenibilità ambientale.
 
-##  Il sistema centrale : `simulatore_agricolo.py`
-Questo modulo è il nucleo centrale del progetto. Si tratta di uno script in python che modella la logica decisionale e produttiva dell'azienda agricola.
 
 **Caratteristiche Tecniche:**
 * **Ho utilizzato la classe `DigitalTwinAgricolo` per incapsulare i dati e i metodi, rendendo il codice scalabile. Se in futuro l'azienda volesse aggiungere un nuovo raccolto (es. Mais), basterebbe aggiungere un record al dizionario senza toccare la logica algoritmica.
