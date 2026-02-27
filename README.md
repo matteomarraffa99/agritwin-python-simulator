@@ -28,7 +28,7 @@ Quando si lancia lo script, l'algoritmo calcola l'intera stagione di raccolta in
 Il sistema comunica al management:
 1. Quale evento climatico ha colpito la stagione corrente.
 2. Le tonnellate nette realmente raccolte.
-3. Il gap analysis sui tempi (Ore di lavoro necessarie e Giornate lavorative totali, tenendo conto dei colli di bottiglia e della capacità massima giornaliera).
+3. Il gap analysis sui tempi (Ore di lavoro necessarie e giornate lavorative totali, tenendo conto dei colli di bottiglia e della capacità massima giornaliera).
 4. Un check immediato sui costi in Euro e sui chilogrammi di CO2 emessi per ogni specifico lotto.
    
 🚀 Come avviare la simulazione
