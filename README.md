@@ -4,7 +4,7 @@
 
 
 # 🌾 AgriTwin - Digital Twin Stocastico per l'Agricoltura 4.0
-**Python
+**Python**
 
 **Project Work:** Sviluppo di un codice Python per simulare un processo produttivo nel settore primario.
 
