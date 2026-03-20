@@ -1,4 +1,4 @@
-# PW 15. Sviluppo di un codice python per simulare un processo produttivo nel settore primario.  Autore: Matteo Marraffa  Mat. 0312400879
+# PW 15. Sviluppo di un codice python per simulare un processo produttivo nel settore primario.  Autore: Matteo Marraffa 
 
 
 
