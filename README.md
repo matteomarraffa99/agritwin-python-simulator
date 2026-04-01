@@ -1,4 +1,3 @@
-# PW 15. Sviluppo di un codice python per simulare un processo produttivo nel settore primario.  Autore: Matteo Marraffa 
 
 
 
